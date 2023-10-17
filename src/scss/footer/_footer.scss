@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    .contenido-footer {
+        padding: 5rem 0;
+        
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    .copyright {
+        margin: 0;
+        color: v.$blanco;
+        padding: 1rem;
+    }
+}
+
+.caja-footer {
+    font-family: v.$fuenteCursiva;
+    text-align: center;
+    margin-bottom: v.$separacion;
+
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        color: v.$secundario;
+        font-family: v.$fuenteCursiva;
+        font-size: 2.4rem;
+        margin: 0 0 1rem 0;
+    }
+
+    p, a {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
