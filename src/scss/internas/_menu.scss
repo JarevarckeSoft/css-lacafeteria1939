@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-menu {
+	background-image: url(../img/cafe.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100%;
+	aspect-ratio: 1 / 3.7;
+
+	@include m.telefonoSmall {
+		aspect-ratio: 1 / 2.8;
+	}
+
+	@include m.telefono {
+		aspect-ratio: 3 / 6;
+	}
+
+	@include m.tabletSmall {
+		aspect-ratio: 3 / 4.5;
+	}
+
+	@include m.tablet {
+		@include m.grid(2, v.$separacion);
+		aspect-ratio: 16 / 6;
+		background-size: 60%;
+		background-position: bottom right;
+	}
+
+	@include m.desktop {
+		background-size: 50%;
+	}
+
+	.texto {
+		p {
+			font-size: 2rem;
+		}
+	}
+}
