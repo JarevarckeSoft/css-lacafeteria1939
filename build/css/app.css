@@ -374,6 +374,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -439,25 +440,11 @@ h3 {
   font-size: 3.2rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.bg-primario {
-  background-color: #5e311e;
-}
-
-.margin-negativo-10 {
-  margin-top: -10rem;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -491,6 +478,18 @@ h3 {
 
 .header-inicio {
   background-image: url(../img/header_inicio.jpg);
+}
+
+.header-nosotros {
+  background-image: url(../img/header_nosotros.jpg);
+}
+
+.header-proceso {
+  background-image: url(../img/header_proceso.jpg);
+}
+
+.header-menu {
+  background-image: url(../img/header_menu.jpg);
 }
 
 .nav-principal {
@@ -546,6 +545,44 @@ h3 {
     width: 20rem;
     margin: 0;
   }
+}
+
+.footer .contenido-footer {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .footer .contenido-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.footer .copyright {
+  margin: 0;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.caja-footer {
+  font-family: "Bona Nova", serif;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .caja-footer {
+    margin-bottom: 0;
+  }
+}
+.caja-footer h3 {
+  color: #c39c63;
+  font-family: "Bona Nova", serif;
+  font-size: 2.4rem;
+  margin: 0 0 1rem 0;
+}
+.caja-footer p, .caja-footer a {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 2;
 }
 
 .contenido-principal {
@@ -741,40 +778,132 @@ h3 {
   font-size: 2.4rem;
 }
 
-.footer .contenido-footer {
-  padding: 5rem 0;
-}
 @media (min-width: 768px) {
-  .footer .contenido-footer {
+  .contenido-nosotros {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
-.footer .copyright {
-  margin: 0;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.caja-footer {
-  font-family: "Bona Nova", serif;
-  text-align: center;
+.contenido-nosotros .imagen {
   margin-bottom: 5rem;
 }
 @media (min-width: 768px) {
-  .caja-footer {
-    margin-bottom: 0;
+  .contenido-nosotros .imagen {
+    margin: 0 2rem 0 0;
   }
 }
-.caja-footer h3 {
-  color: #c39c63;
-  font-family: "Bona Nova", serif;
-  font-size: 2.4rem;
-  margin: 0 0 1rem 0;
+.contenido-nosotros .imagen img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 2rem solid #ffffff;
+  box-shadow: 0.9rem 1rem 0.5rem -0.7rem rgba(0, 0, 0, 0.35);
 }
-.caja-footer p, .caja-footer a {
-  font-size: 2rem;
+@media (min-width: 480px) {
+  .contenido-nosotros .imagen img {
+    border: 3rem solid #ffffff;
+  }
+}
+.contenido-nosotros .texto blockquote {
   margin: 0;
-  line-height: 2;
+  padding: 1rem;
+  border-left: 0.5rem solid #5e311e;
+  font-size: 2rem;
+}
+
+.proceso-cafe {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .proceso-cafe {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.proceso-cafe:last-of-type {
+  margin-bottom: 0;
+}
+.proceso-cafe:nth-child(even) .texto {
+  order: -1;
+}
+.proceso-cafe .imagen,
+.proceso-cafe .texto {
+  flex: 1;
+}
+.proceso-cafe .texto {
+  margin-top: 1rem;
+}
+.proceso-cafe .texto h3 {
+  margin: 0;
+  text-align: left;
+  color: #5e311e;
+}
+.proceso-cafe .texto h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.5rem;
+  background-color: #c39c63;
+}
+
+.contenido-menu {
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 1/3.7;
+}
+@media (min-width: 360px) {
+  .contenido-menu {
+    aspect-ratio: 1/2.8;
+  }
+}
+@media (min-width: 480px) {
+  .contenido-menu {
+    aspect-ratio: 3/6;
+  }
+}
+@media (min-width: 600px) {
+  .contenido-menu {
+    aspect-ratio: 3/4.5;
+  }
+}
+@media (min-width: 768px) {
+  .contenido-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 60%;
+    background-position: bottom right;
+  }
+}
+@media (min-width: 1024px) {
+  .contenido-menu {
+    background-size: 50%;
+  }
+}
+.contenido-menu .texto p {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background-color: #5e311e;
+}
+
+.margin-negativo-10 {
+  margin-top: -10rem;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
