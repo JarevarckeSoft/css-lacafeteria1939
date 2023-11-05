@@ -931,13 +931,14 @@ h3 {
   padding: 1rem;
   border: 0.5rem solid #5e311e;
   font-size: 2.2rem;
+  background-color: #ebe7de;
 }
 .formulario .campo input[type=submit] {
   background-color: #5e311e;
   width: 100%;
   border: none;
   padding: 1rem;
-  color: #ffffff;
+  color: #ebe7de;
   font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;

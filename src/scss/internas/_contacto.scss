@@ -36,6 +36,7 @@
 			padding: 1rem;
 			border: .5rem solid v.$primario;
 			font-size: 2.2rem;
+			background-color: v.$cafeClaro;
 		}
 
 		input[type="submit"] {
@@ -43,7 +44,7 @@
 			width: 100%;
 			border: none;
 			padding: 1rem;
-			color: v.$blanco;
+			color: v.$cafeClaro;
 			font-size: 2.2rem;
 			font-weight: 700;
 			text-transform: uppercase;
